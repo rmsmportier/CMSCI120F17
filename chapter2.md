@@ -5,7 +5,7 @@ description : CMSCI 120 Lab Assignment
 --- type:NormalExercise lang:python xp:100 skills:1 key:b66b5626af
 ## Fix the Error
 
-Notice the string entered in script on right.  Try running in the shell below by highlighting and pressing Ctrl-Enter:
+Notice the string entered in script on right.  Try running in the iPython shell by highlighting and pressing Ctrl-Enter:
 
 Think about the type of error message you received.
 
@@ -111,7 +111,7 @@ test_mc(3, [msg_bad, msg_bad, msg_success])
 --- type:NormalExercise lang:python xp:100 skills:1 key:791cd66fd0
 ## Try Something New Take 3
 
-Take a look at the code entered in the script to the right.  Try running it in the shell below.
+Take a look at the code entered in the script to the right.  Try running it in the iPython shell.
 
 What type of error occurs?  See if you can correct the error in the script.
 
@@ -181,6 +181,8 @@ import numpy as np
 ```{python}
 # Correct the syntax error below
 a = 1 + 3 + 4 + 5 + 7 + 10 + 14 + 22 + 28 + 34
+
+# Print value in a
 print(a)
 ```
 
@@ -188,6 +190,8 @@ print(a)
 ```{python}
 # Correct the syntax error below
 a = 1 + 3 + 4 + 5 + 7 + 10 + 13 + 14 + 22 + 28 + 34
+
+# Print value in a
 print(a)
 ```
 
@@ -409,3 +413,254 @@ msg_bad = "That is not correct."
 msg_success = "Correct!  This is string because of the quotes.  This actually replicates (multiplies) the string 3 twice."
 test_mc(3, [msg_bad, msg_bad, msg_success, msg_bad])
 ```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:22c8690582
+## PEMDAS
+
+Take a look at the code entered in the script to the right.  Try running it in the iPython shell.
+
+Using (), show the groupings as they would be applied for PEMDAS.  Run the result in the shell to validate accuracy.
+
+
+*** =instructions
+- Add () to show each grouping done by PEMDAS order of precedence
+
+*** =hint
+- What does each part of PEMDAS represent?
+- Why is the order of the letters important?
+
+*** =pre_exercise_code
+```{python}
+```
+
+*** =sample_code
+```{python}
+# Correct the syntax error below
+a = 2 + 3 * 5 + 9
+
+# Print value of a
+print(a)
+```
+
+*** =solution
+```{python}
+# Correct the syntax error below
+a = ((2 + (3 * 5)) + 9)
+
+# Print value of a
+print(a)
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_student_typed("a\s*=\s*\(\(2\s*\+\s*\(3\s*\*\s*5\)\)\s*\+\s*9\)",not_typed_msg="Check your PEMDAS (); make sure you have covered all operations in correct order.")
+
+test_object("a",
+            undefined_msg = "Don't remove the definition of variable *a*.",
+            incorrect_msg = "Check your PEMDAS () again.")
+
+success_msg("Good job! For this one, we complete the multiplication, then the first addition, then the second addition.")
+
+```
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:9f70d8f6e1
+## PEMDAS (2)
+
+Take a look at the code entered in the script to the right.  Try running it in the iPython shell.
+
+Using (), show the groupings as they would be applied for PEMDAS.  Run the result in the shell to validate accuracy.
+
+
+*** =instructions
+- Add () to show each grouping done by PEMDAS order of precedence
+
+*** =hint
+- What does each part of PEMDAS represent?
+- Why is the order of the letters important?
+
+*** =pre_exercise_code
+```{python}
+```
+
+*** =sample_code
+```{python}
+# Correct the syntax error below
+a = 2 + 3 * (5 + 9)
+
+# Print value of a
+print(a)
+```
+
+*** =solution
+```{python}
+# Correct the syntax error below
+a = (2 + (3 * (5 + 9)))
+
+# Print value of a
+print(a)
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_student_typed("a\s*=\s*\(2\s*\+\s*\(3\s*\*\s*\(5\s*\+\s*9\)\)",not_typed_msg="Check your PEMDAS (); make sure you have covered all operations in correct order.")
+
+test_object("a",
+            undefined_msg = "Don't remove the definition of variable *a*.",
+            incorrect_msg = "Check your PEMDAS () again.")
+
+success_msg("Good job! For this one, we complete the operation in parentheses, then multiplication, then the addition.")
+
+```
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:2b0f436126
+## PEMDAS (3)
+
+Take a look at the code entered in the script to the right.  Try running it in the iPython shell.
+
+Using (), show the groupings as they would be applied for PEMDAS.  Run the result in the shell to validate accuracy.
+
+
+*** =instructions
+- Add () to show each grouping done by PEMDAS order of precedence
+
+*** =hint
+- What does each part of PEMDAS represent?
+- Why is the order of the letters important?
+
+*** =pre_exercise_code
+```{python}
+```
+
+*** =sample_code
+```{python}
+# Correct the syntax error below
+a = 2 // 3 + 5 % 9
+
+# Print value of a
+print(a)
+```
+
+*** =solution
+```{python}
+# Correct the syntax error below
+a = ((2 // 3) + (5 % 9))
+
+# Print value of a
+print(a)
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_student_typed("a\s*=\s*\(\(2\s*//\s*3\)\s*\+\s*\(5\s*\%\s*9\)\)",not_typed_msg="Check your PEMDAS (); make sure you have covered all operations in correct order.")
+
+test_object("a",
+            undefined_msg = "Don't remove the definition of variable *a*.",
+            incorrect_msg = "Check your PEMDAS () again.")
+
+success_msg("Good job! For this one, we complete the integer division, then the modulus calculation, then the addition.")
+
+```
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:2506eea444
+## Fix the Error (2)
+
+Notice the string entered in script on right.  Try running in the iPython shell by highlighting and pressing Ctrl-Enter:
+
+Think about the type of error message you received.
+
+*** =instructions
+- Run the command and look at error output
+- Try switching the order of variable name and value
+
+*** =hint
+- Check the order of variable and expression in your assignment statement
+
+
+*** =pre_exercise_code
+```{python}
+```
+
+*** =sample_code
+```{python}
+# Correct the syntax error below
+87 = x
+
+# Print value of x
+print(x)
+
+```
+
+*** =solution
+```{python}
+# Correct the syntax error below
+x = 87
+
+# Print value of x
+print(x)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+test_student_typed("x\s*=\s*87",not_typed_msg="Check your variable assignment statement.")
+
+test_object("x",
+            undefined_msg = "You need an assignment statement for variable *x*.",
+            incorrect_msg = "Did you correct assignment for variable *x*?")
+
+success_msg("Nice job; Assignment statements must put variable on the left and expression on the right.")
+
+```
+
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:4d375bba62
+## Operation Shortcuts
+
+Take a look at the code below.  Try running it in the iPython shell.
+
+*a = b = 5*
+
+
+*c = b + 2*
+
+
+*b += 2*
+
+What are the values of *a*, *b*, and *c* once run?
+
+
+*** =instructions
+- *a* is 5, *b* is 5, *c* is 7
+- *a* is 5, *b* is 7, *c* is 7
+- *a* is 5, *b* is 5, *c* is 5
+- *a* is 5, *b* is 5, *c* is 5
+
+*** =hint
+- Try using print() for each variable to see current value
+
+*** =pre_exercise_code
+```{python}
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+msg_bad = "That is not correct."
+msg_success = "Correct!!  The first assignment statement sets up both *a* and *b*, the second creates *c* with current value of *b* + 2, and the third adds 2 to *b* with short hand version of *b = b + 2*.  Similar shorthand can be used for other arithmetic operations."
+test_mc(2, [msg_bad, msg_success, msg_bad, msg_bad])
+
+```
+
+
